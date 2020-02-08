@@ -8,17 +8,4 @@ import {UserService} from "../services/user.service";
 export class UserController {
     constructor(private readonly userService: UserService){}
 
-    @Post()
-    async create(@Body() user: UserDto){
-        return await this.userService.create(user);
-    }
-
-    @Get()
-    async getById(@Param('id') id:ObjectID){
-        return await this.userService.findById(id);
-    }
-    @Get('email')
-    async getByEmail(@Param('email') email:string){
-        return await this.userService.findByEmail(email);
-    }
 }
