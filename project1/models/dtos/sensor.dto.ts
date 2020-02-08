@@ -5,4 +5,6 @@ export class SensorDto {
     longitude?: number;
 
     temperature?: number;
+
+    username?: string;
 }

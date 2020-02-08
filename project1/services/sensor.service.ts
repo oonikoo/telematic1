@@ -17,7 +17,7 @@ export class SensorService {
     }
 
     public  getAllData():Promise<SensorDto[]>{
-        return this.sensorRepository.find({ select: ["latitude", "longitude", "temperature"] })
+        return this.sensorRepository.find({ select: ["username","latitude", "longitude", "temperature"] })
             .then(getData => SensorService.mapSensorsToDto(getData))
     }
 
@@ -25,7 +25,8 @@ export class SensorService {
         return sensor ? {
             latitude: sensor.latitude,
             longitude: sensor.longitude,
-            temperature: sensor.temperature
+            temperature: sensor.temperature,
+            username: sensor.username
         } : undefined;
     }
 
@@ -36,7 +37,8 @@ export class SensorService {
                 {
                     latitude: sensor.latitude,
                     longitude: sensor.longitude,
-                    temperature: sensor.temperature
+                    temperature: sensor.temperature,
+                    username: sensor.username
                 }
             )
         });

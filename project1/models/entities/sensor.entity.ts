@@ -13,4 +13,7 @@ export class Sensor{
 
     @Column()
     temperature?: number;
+
+    @Column()
+    username?: string;
 }

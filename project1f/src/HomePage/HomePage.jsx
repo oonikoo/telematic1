@@ -21,16 +21,17 @@ class HomePage extends React.Component {
         let table = [];
         let styles = {padding:'0 15px 0 15px'};
         let sens = this.state.sensors;
-        console.log((sens[0] === undefined));
         // Outer loop to create parent
         table.push(<tr>{
-            [<td style={styles}>latitude</td>,
+            [<td style={styles}>username</td>,
+            <td style={styles}>latitude</td>,
             <td style={styles}>longitude</td>,
             <td style={styles}>temperature</td>]
         }</tr>);
         for (let i = 1; i < sens.length; i++) {
             let children = [];
             //Inner loop to create children
+            children.push(<td style={styles}>{sens[i]['username']}</td>);
             children.push(<td style={styles}>{sens[i]['latitude']}</td>);
             children.push(<td style={styles}>{sens[i]['longitude']}</td>);
             children.push(<td style={styles}>{sens[i]['temperature']}</td>);
