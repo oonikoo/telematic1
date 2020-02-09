@@ -35,7 +35,7 @@ class LoginPage extends React.Component {
                         authenticationService.login(username, password)
                             .then(
                                 user => {
-                                    const { from } = this.props.location.state || { from: { pathname: "/" } };
+                                    const {from} = this.props.location.state || {from: {pathname: "/"}};
                                     this.props.history.push(from);
                                 },
                                 error => {
@@ -48,7 +48,7 @@ class LoginPage extends React.Component {
                         <Form>
                             <div className="form-group">
                                 <label htmlFor="username">Username</label>
-                                <Field name="username" type="text" className={'form-control' + (errors.username && touched.username ? ' is-invalid' : '')} />
+                                <Field name="username" type="email" className={'form-control' + (errors.username && touched.username ? ' is-invalid' : '')} />
                                 <ErrorMessage name="username" component="div" className="invalid-feedback" />
                             </div>
                             <div className="form-group">
