@@ -1,3 +1,11 @@
+<b>¿COMO COMPILAR Y CORRER EL PROGRAMA?</b>
+
+Tanto en el frontend como en el backend solo es necesario instalar los paquetes e iniciar la ejecución.
+
+-npm install (Instala los paquetes necesarios).
+
+-npm start (Comienza la ejecución del programa)
+
 <b>1. ¿CUAL ES LA PROBLEMÁTICA QUE QUIERE RESOLVER?</b>
 
 No existe un sistema seguro para guardar y exponer los datos generados por sensores (temperatura, latitud, longitud), es necesario distinguir roles, los sensores son los únicos que pueden agregar datos a la base de datos y los usuarios son aquellos que pueden visualizarlos, por lo cual es necesario crear una aplicación web que resuelva el problema y las necesidades.
